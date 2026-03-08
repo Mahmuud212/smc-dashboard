@@ -78,3 +78,18 @@ else:
 # -------------------------
 st.subheader("Tableau des clients à risque")
 st.dataframe(df_clients_filtre, use_container_width=True)
+st.subheader("Simulation de prédiction IA")
+
+message = st.text_input("Entrer un message client")
+
+if message:
+    import random
+
+    score = round(random.uniform(0.3, 0.95), 2)
+
+    if score > 0.8:
+        st.error(f"⚠ Risque élevé de churn : {score}")
+    elif score > 0.6:
+        st.warning(f"⚠ Risque modéré de churn : {score}")
+    else:
+        st.success(f"Client stable : {score}")
