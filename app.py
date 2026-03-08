@@ -106,3 +106,10 @@ churn_trend = pd.DataFrame({
 })
 
 st.line_chart(churn_trend.set_index("Date"))
+st.subheader("Indice global de satisfaction")
+
+score = 78
+
+st.progress(score / 100)
+
+st.write(f"Score global de satisfaction : {score}%")
