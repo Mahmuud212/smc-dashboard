@@ -93,3 +93,16 @@ if message:
         st.warning(f"⚠ Risque modéré de churn : {score}")
     else:
         st.success(f"Client stable : {score}")
+st.subheader("Évolution du risque de churn")
+
+import numpy as np
+import pandas as pd
+
+dates = pd.date_range(start="2024-01-01", periods=10)
+
+churn_trend = pd.DataFrame({
+    "Date": dates,
+    "Score moyen churn": np.random.uniform(0.4, 0.9, 10)
+})
+
+st.line_chart(churn_trend.set_index("Date"))
