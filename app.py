@@ -113,3 +113,15 @@ score = 78
 st.progress(score / 100)
 
 st.write(f"Score global de satisfaction : {score}%")
+st.subheader("Distribution des scores de churn")
+
+import numpy as np
+
+# Simulation de scores churn
+churn_scores = np.random.uniform(0, 1, 100)
+
+hist_data = pd.DataFrame({
+    "Score_Churn": churn_scores
+})
+
+st.bar_chart(hist_data)
