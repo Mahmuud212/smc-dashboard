@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Dashboard IA - Satisfaction Client")
-st.write("Bienvenue dans le dashboard du projet SMC Insight.")
+st.title("SMC INSIGHT - Satisfaction Client")
+st.write("Bienvenue dans le dashboard de prédiction du churn.")
 
 # -------------------------
 # Données simulées
